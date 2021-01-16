@@ -30,6 +30,6 @@ export class SneakyCounterWriteComponent implements OnInit {
   }
 
   set(): void {
-    this.store.dispatch(set({value: this.val}));
+    this.store.dispatch(set({ value: this.val }));
   }
 }

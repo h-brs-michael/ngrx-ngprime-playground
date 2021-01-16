@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { CounterState } from '../../../reducers/counter/counter.reducer';
-import { selectCountState, selectCounter } from '../../../reducers/counter/counter.selector';
+import { selectCounter } from '../../../reducers/counter/counter.selector';
 
 @Component({
   selector: 'app-sneaky-counter-read',

@@ -16,7 +16,7 @@ export class CounterComponentComponent implements OnInit {
   count = 10;
 
   constructor(private store: Store<{ count: CounterState }>) {
-    this.count$ = store.select(selectCounter); // todo: add key irgendwo
+    this.count$ = store.select(selectCounter);
   }
 
   ngOnInit(): void {

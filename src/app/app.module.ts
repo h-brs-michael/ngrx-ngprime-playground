@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExampleComponent } from './components/example/example.component';
@@ -11,7 +10,6 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
-import { counterReducer } from './reducers/counter/counter.reducer';
 import { CounterComponentComponent } from './components/store/counter-component/counter-component.component';
 import { FormsModule } from '@angular/forms';
 import { SneakyCounterReadComponent } from './components/store/sneaky-counter-read/sneaky-counter-read.component';

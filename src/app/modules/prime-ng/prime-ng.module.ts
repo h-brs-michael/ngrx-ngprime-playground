@@ -9,8 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { AvatarModule } from 'primeng/avatar';
 import { KnobModule } from 'primeng/knob';
 import { DividerModule } from 'primeng/divider';
-import {InputNumberModule} from 'primeng/inputnumber';
-
+import { InputNumberModule } from 'primeng/inputnumber';
 
 
 @NgModule({
