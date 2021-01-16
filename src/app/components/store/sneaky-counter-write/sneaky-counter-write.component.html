@@ -1,0 +1,41 @@
+<p-card header="sneaky-counter-write">
+
+  <div class="p-grid">
+    <div class="p-col">
+      <button pButton
+              class="p-button-rounded p-button-info"
+              (click)="increment()"
+              label="Increment">
+      </button>
+    </div>
+    <div class="p-col">
+      <button pButton
+              class="p-button-rounded p-button-info"
+              (click)="decrement()"
+              label="Decrement">
+      </button>
+    </div>
+    <div class="p-col">
+      <button pButton
+              class="p-button-rounded p-button-warning"
+              (click)="reset()"
+              label="Reset Counter">
+      </button>
+    </div>
+    <div class="p-col">
+
+      <span class="p-float-label p-pb-2">
+          <p-inputNumber inputId="inputnumber" [(ngModel)]="val"></p-inputNumber>
+          <label for="inputnumber">Couter value</label>
+      </span>
+
+      <button pButton
+              class="p-button-rounded p-button-success"
+              (click)="set()"
+              label="Set counter value">
+      </button>
+    </div>
+  </div>
+
+
+</p-card>

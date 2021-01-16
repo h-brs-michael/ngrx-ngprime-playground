@@ -1,0 +1,38 @@
+<p-card header="counter-component">
+
+  <div class="p-grid p-jc-center">
+    <div class="p-col" [style]="{textAlign: 'center'}">
+      <p-knob [readonly]="true" [ngModel]="count$ | async"></p-knob>
+    </div>
+  </div>
+
+  <p-divider></p-divider>
+
+  <p-footer>
+
+    <div class="p-grid">
+      <div class="p-col">
+        <button pButton
+                class="p-button-rounded p-button-info"
+                (click)="increment()"
+                label="Increment">
+        </button>
+      </div>
+      <div class="p-col">
+        <button pButton
+                class="p-button-rounded p-button-info"
+                (click)="decrement()"
+                label="Decrement">
+        </button>
+      </div>
+      <div class="p-col">
+        <button pButton
+                class="p-button-rounded p-button-warning"
+                (click)="reset()"
+                label="Reset Counter">
+        </button>
+      </div>
+    </div>
+
+  </p-footer>
+</p-card>
