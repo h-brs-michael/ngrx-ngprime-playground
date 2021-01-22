@@ -4,13 +4,16 @@ import {
 } from '@ngrx/store';
 import { environment } from '../../environments/environment';
 import { counterReducer, CounterState } from './counter/counter.reducer';
+import { movieReducer, MovieState } from './movie/movie.reducer';
 
 export interface AppState {
   count: CounterState;
+  movieState: MovieState;
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-  count: counterReducer
+  count: counterReducer,
+  movieState: movieReducer
 };
 
 

@@ -1,0 +1,14 @@
+<p-card header="service-effect-movie-read">
+
+  <p>this value is only simulated server call</p>
+  <p><strong>Movie:</strong> {{(movie$ | async)?.name}}</p>
+
+  <p-divider></p-divider>
+
+  <button pButton
+          class="p-button-rounded p-button-success p-m-1"
+          (click)="getNewServiceValue()"
+          label="Get service counter value">
+  </button>
+
+</p-card>

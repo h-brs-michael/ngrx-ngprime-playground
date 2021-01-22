@@ -14,6 +14,11 @@ import { CounterComponentComponent } from './components/store/counter-component/
 import { FormsModule } from '@angular/forms';
 import { SneakyCounterReadComponent } from './components/store/sneaky-counter-read/sneaky-counter-read.component';
 import { SneakyCounterWriteComponent } from './components/store/sneaky-counter-write/sneaky-counter-write.component';
+import { EffectsModule } from '@ngrx/effects';
+import { MovieEffects } from './reducers/movie/movie.effects';
+import { ServiceCounterComponent } from './components/store/service-counter/service-counter.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,8 @@ import { SneakyCounterWriteComponent } from './components/store/sneaky-counter-w
     PageNotFoundComponent,
     CounterComponentComponent,
     SneakyCounterReadComponent,
-    SneakyCounterWriteComponent
+    SneakyCounterWriteComponent,
+    ServiceCounterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,9 @@ import { SneakyCounterWriteComponent } from './components/store/sneaky-counter-w
     FormsModule,
     AppRoutingModule,
     PrimeNgModule,
-    StoreModule.forRoot(reducers, { metaReducers }) // added with ng add non minimal
+    StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot([MovieEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }) // added with ng add non minimal
   ],
   providers: [],
   bootstrap: [AppComponent]
